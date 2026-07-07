@@ -1,0 +1,28 @@
+import api from './api';
+
+export const adminService = {
+  getDashboardStats: () => api.get('/admin/dashboard').then((r) => r.data),
+  getRevenueReport: (range) => api.get('/admin/revenue', { params: { range } }).then((r) => r.data),
+  getUsers: (params) => api.get('/admin/users', { params }).then((r) => r.data),
+  updateUserStatus: (id, status) => api.patch(`/admin/users/${id}/status`, { status }).then((r) => r.data),
+  getCandidates: (params) => api.get('/admin/candidates', { params }).then((r) => r.data),
+  updateCandidate: (id, payload) => api.patch(`/admin/candidates/${id}`, payload).then((r) => r.data),
+  deleteCandidate: (id) => api.delete(`/admin/candidates/${id}`).then((r) => r.data),
+  getCompanies: (params) => api.get('/admin/companies', { params }).then((r) => r.data),
+  updateCompany: (id, payload) => api.patch(`/admin/companies/${id}`, payload).then((r) => r.data),
+  deleteCompany: (id) => api.delete(`/admin/companies/${id}`).then((r) => r.data),
+  getPayments: (params) => api.get('/admin/payments', { params }).then((r) => r.data),
+  getVerifications: (status) => api.get('/admin/verifications', { params: { status } }).then((r) => r.data),
+  reviewVerification: (id, payload) => api.patch(`/admin/verifications/${id}`, payload).then((r) => r.data),
+  getCommunications: (params) => api.get('/admin/communications', { params }).then((r) => r.data),
+  getCategories: () => api.get('/admin/categories').then((r) => r.data),
+  createCategory: (payload) => api.post('/admin/categories', payload).then((r) => r.data),
+  updateCategory: (id, payload) => api.patch(`/admin/categories/${id}`, payload).then((r) => r.data),
+  deleteCategory: (id) => api.delete(`/admin/categories/${id}`).then((r) => r.data),
+  getSkills: () => api.get('/admin/skills').then((r) => r.data),
+  createSkill: (payload) => api.post('/admin/skills', payload).then((r) => r.data),
+  updateSkill: (id, payload) => api.patch(`/admin/skills/${id}`, payload).then((r) => r.data),
+  deleteSkill: (id) => api.delete(`/admin/skills/${id}`).then((r) => r.data),
+  getReviews: () => api.get('/admin/reviews').then((r) => r.data),
+  deleteReview: (id) => api.delete(`/admin/reviews/${id}`).then((r) => r.data),
+};

@@ -1,0 +1,64 @@
+.payment-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.payment-history-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.payment-history-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr auto auto;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+.payment-history-freelancer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.payment-history-amount {
+  font-weight: 700;
+}
+
+.payment-history-invoice {
+  font-size: var(--font-size-xs);
+}
+
+.payment-history-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  white-space: nowrap;
+}
+
+.payment-history-details {
+  padding: 0 var(--space-4) var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 900px) {
+  .payment-history-row {
+    grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-2);
+  }
+
+  .payment-history-invoice {
+    display: none;
+  }
+}

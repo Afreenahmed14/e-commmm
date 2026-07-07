@@ -1,0 +1,70 @@
+.engagement-panel {
+  margin-top: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--color-border);
+}
+
+.engagement-panel-label {
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  margin: 0 0 var(--space-2);
+  color: var(--color-text);
+}
+
+.engagement-dates {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: var(--space-3);
+}
+
+.engagement-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+.engagement-field input {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  font-size: var(--font-size-sm);
+  font-family: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+.engagement-error {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-2);
+}
+
+.engagement-saved {
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  margin-top: var(--space-2);
+}
+
+.engagement-summary {
+  margin-top: var(--space-3);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  display: inline-block;
+}
+
+.engagement-summary strong {
+  color: var(--color-text);
+}
+
+@media (max-width: 640px) {
+  .engagement-dates {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
